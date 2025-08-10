@@ -1,0 +1,31 @@
+ZT:  6
+AT:  12
+ZP:  2
+AP:  3
+ZE:  1
+AE:  2
+ZD1: 1
+AD1: 1
+
+beam_E_(MeV):     24.0
+rxnang_lab_(deg): 20.0
+
+P_exc_(MeV):  0.000
+T_exc_(MeV):  0.000
+R_exc_(MeV):  3.547
+E_exc_(MeV):  0.000
+D1_exc_(MeV): 0.000
+D2_exc_(MeV): 0.000
+
+fort37_file: 37files/12C3Hed_exc3_dwba_cosmo_varyexitVandbsr.37
+
+Pi: +1
+BR: 1.00
+
+euler_alpha_(deg): 90
+euler_beta_(deg):  90
+euler_gamma_(deg):  0
+
+canv_label: ^{12}C(^{3}He,d)^{13}N*(p)^{12}C Doublet (5/2^{+}) | #theta_{rxn}^{LAB} = 20^{o}
+
+outfile_label: bees_doublet_exc3only_dwba_cosmo_varyexitVandbsr_perpq_sps20

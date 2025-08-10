@@ -1,0 +1,3 @@
+input_rootfile: ../rootfiles/geebees_doublet_dwba_cosmo_varyexitVandbsr_baxisq_sps20.root
+
+output_name: doublet_calc_varyexitVandbsr_sps20

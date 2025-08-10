@@ -1,0 +1,31 @@
+ZT:  6
+AT:  12
+ZP:  2
+AP:  3
+ZE:  1
+AE:  2
+ZD1: 1
+AD1: 1
+
+beam_E_(MeV):     24.0
+rxnang_lab_(deg): 20.0
+
+P_exc_(MeV):  0.000
+T_exc_(MeV):  0.000
+E_exc_(MeV):  0.000
+D1_exc_(MeV): 0.000
+D2_exc_(MeV): 0.000
+
+NUM_STATES: 2
+
+Parity Exc   Width BR   Filename   Label
+-1     3.502 0.062 1.00 37files/12C3Hed_exc2_dwba_cosmo.37 3/2^{-}
++1     3.547 0.047 1.00 37files/12C3Hed_exc3_3hp_dwba_cosmo.37 3/2^{+}
+
+euler_alpha_(deg): 90.0
+euler_beta_(deg):  90.0
+euler_gamma_(deg):  0.0
+
+canv_label: ^{12}C(^{3}He,d)^{13}N*(p)^{12}C Doublet | #theta_{SPS} = 20.0^{o}
+
+outfile_label: geebees_doublet_dwba_cosmo_exc3_3hp_perpq_sps20

@@ -1,0 +1,9 @@
+input_rootfile: ../rootfiles/geebees_doublet_dwba_cosmo_perpq_sps20.root
+
+NUM_XY_PROJS: 1
+COS_ZANG: 0
+
+NUM_Z_PROJS: 0
+XYANG_(deg):
+
+output_name: doublet_dwba_cosmo_perpq_sps20

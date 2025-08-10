@@ -1,0 +1,31 @@
+ZT:  6
+AT:  12
+ZP:  0
+AP:  1
+ZE:  0
+AE:  1
+
+beam_E_(MeV):     10.0
+rxnang_lab_(deg): 30.0
+P_exc_(MeV):      0.000
+T_exc_(MeV):      0.000
+R_exc_(MeV):      4.4389
+E_exc_(MeV):      0.000
+D1_exc_(MeV):     0.000
+D2_exc_(MeV):     0.000
+
+fort37_file: 37files/12Cn_2+_inelastic_10MeV.37
+
+Pi: +1
+Jf: 0.0
+Pf: +1
+delta21: 0.00
+delta31: 0.00
+
+euler_alpha_(deg): 90
+euler_beta_(deg):  90
+euler_gamma_(deg):  0
+
+canv_label: ^{12}C(n,n'#gamma)^{12}C(2^{+}_{1})
+
+outfile_label: gambees_12Cn_2+_inelastic_10MeV_perpq_rxnang30
