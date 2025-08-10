@@ -1,0 +1,66 @@
+#include <iostream>
+#include <cmath>
+#include <fstream>
+#include <cstring>
+#include <cstdlib>
+
+using namespace std;
+
+double Rutherford_XSec(double eta, double k, double theta);
+
+int main(int argc, char** argv) {
+
+  const double HBARC             = 197.327; //MeV*fm
+  const double FSC               = 1./(137.036); //fine structure const.
+  const double UTOMEV            = 931.4940954; //MeV per u
+  const double RESTMASS_ELECTRON = 0.000548579909; //amu
+
+  if (argc!=4) {
+    cout << "Enter beam energy, input file, output file." << endl;
+    return 1;
+  }
+
+  double Ebeam = atof(argv[1]); //lab MeV
+  
+  ifstream infile;
+  infile.open(argv[2]);
+  if (!infile) {
+    cout << "***WARNING: infile failed to open." << endl;
+    return 2;
+  }
+  
+  //target
+  const int ZT =  6;
+  const int AT = 12;
+  const double MT = (12. - ZT*RESTMASS_ELECTRON)*UTOMEV;
+
+  //projectile (beam)
+  const int ZP = 2;
+  const int AP = 3;
+  const double MP = (3.016029 - ZP*RESTMASS_ELECTRON)*UTOMEV;
+
+  const double ECM = Ebeam*AT/(AT+AP); //MeV
+
+  const double MU  = MT*MP/(MT + MP);
+  const double K   = sqrt(2*MU*ECM)/HBARC;
+  const double ETA = ZT*ZP*MU*FSC/(HBARC*K);
+
+  ofstream outfile;
+  outfile.open(argv[3]);
+
+  //the 10. in the following is to convert mb to fm^2
+  
+  double theta, theta_unc, xsec, xsec_unc;
+  while (!infile.eof()) {
+    infile >> theta >> theta_unc >> xsec >> xsec_unc;
+    outfile << theta << "  " << theta_unc << "  " << xsec/(10.*Rutherford_XSec(ETA,K,theta*M_PI/180.)) << "  " << xsec_unc/(10.*Rutherford_XSec(ETA,K,theta*M_PI/180.)) << endl;
+  }
+
+  infile.close();
+  outfile.close();
+  
+  return 0;
+
+}
+
+double Rutherford_XSec(double eta, double k, double theta) {return eta*eta/(4*k*k*pow(sin(theta/2),4));}
